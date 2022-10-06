@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Framework: Basics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='css/style.css'/>
+</head>
+<body>
+        <header>
+            <div class='navbar nav-dark nav-fixed items-center front'>
+                <div class='item-holder'>
+                    <p class='nav-title'>CSS Framework</p>
+                    <p class='nav-item active'>
+                    <a href='./index.html'>Basic Elements</a>
+                    </p>
+                    <p class='nav-item'>
+                        <a href='./interactive.html'>Interactive Elements</a>
+                    </p>
+                    <p class='nav-item'>
+                        <a href='./prebuilt.html'>Prebuilt Items</a>
+                    </p>
+                </div>
+                
+                <a href='javascript:void(0);' class='nav-icon'>
+                    <i class='fa fa-bars'></i>
+                </a>
+            </div>
+        </header>
+
+    <container>
+        <div class='blank-top'></div>
+        <div class='background-darker center-x stack px-5 mx-3 my-2 pb-1' id='columns'>
+            <h3>Columns</h3>
+            <p>
+                Columns are made by using col-[number] where number is 1-12. Each 
+                column takes up 1/12 of the screen, so col-7 would take up 7/12 
+                of the screen. You can have several columns next to each other 
+                with values that add up to 12 (such as one being col-5 and the other 
+                being col-7). It is not advised to use col to size a single element. 
+                The containing element should use the 'row' class. If you want all 
+                columns to be the same height, add the 'parent-height' class.
+            </p>
+            <p>
+                All of the below entries use col-7 paired with col-5.
+            </p>
+        </div>
+        <div class='row my-2 stack-sm stack-rv' id='headers-and-text'>
+            <div class='row parent-height col-7 align-top'>
+                <div class='stack align-right border-right pr-2 center-x w-50'>
+                    <p class='txt-font-header'>Header font</p>
+                    <p class='txt-font-header txt-w-bold'>Bold header font</p>
+                    <p clsas='txt-font-basic'>Basic font</p>
+                    <p class='txt-font-basic txt-w-bold'>Bold basic font</p>
+                    <p class='txt-font-fun'>Fun font</p>
+                    <p class='txt-font-fun txt-w-bold'>Bold fun font</p>
+                    <p class='txt-font-code'>Code font</p>
+                    <p class='txt-font-code txt-w-bold'>Bold code font</p>
+                    <p>
+                        <a href='#'>Link</a>
+                    </p>
+                </div>
+                <div class='stack align-right pr-2 pt-0 center-x w-50'>
+                    <h1>Header 1</h1>
+                    <h2>Header 2</h2>
+                    <h3>Header 3</h3>
+                    <h4>Header 4</h4>
+                    <h5>Header 5</h5>
+                    <h6>Header 6</h6>
+                    <p>Paragraph</p>
+                </div>
+            </div>
+            
+            <div class='stack parent-height align-top center-x col-5 px-0 background-darker'>
+                <h1 class='txt-w-semibold'>Headers & Text</h1>
+                <p>
+                    The header classes are used like default headers. 
+                    They use the Crimson Text font (backup: Times, serif) and 
+                    decrease by 2pt with each header size. The paragraph tags 
+                    are also used like default p tags. They use the Zen Kaku 
+                    Gothic Antique font (backup: Arial, sans serif). There is 
+                    another more fun font option, Irish Grover. The font used
+                    in code tags is the Inconsolata font (backup: Lucida Console, 
+                    monospace).
+                </p>
+                <p>
+                    You can change text properties in several ways. There are 
+                    classes to change the weight and size of fonts as well as 
+                    styling and the font itself. Please note that the light weight
+                    does not work well with most of these fonts.
+                    Weight options are classes starting with 'txt-w-'
+                    and have the options of light, normal, semibold and bold.
+                    Size options start with 'txt-s-' and have the options of
+                    lg, md, and sm. Decoration options start with 'txt-d-' and
+                    have the options of line-thru and line-under. Font can be changed
+                    with 'txt-font-' followed by header, basic, code or fun. The 
+                    color can be changed with 'txt-black' or 'txt-white'. These 
+                    options can all be applied if you use multiple different effects.
+                    Text can be aligned with txt-a-[center, left, right].
+                </p>
+                <p>
+                    Links look as shown in the example with an underline by default,
+                    but you can remove the styling for buttons, navbars, etc by using 
+                    the 'no-deco' class.
+                </p>
+                <div class='code-light mx-1'>
+                    <p>
+                        &lt;p class='txt-w-semibold txt-d-line-under'>Test text&lt;/h6>
+                    </p>
+                </div>
+                <p class='txt-w-semibold txt-d-line-under'>Test text</h6>
+            </div>
+        </div>
+        <div class='row my-2 stack-sm stack-rv' id='lists'>
+            <div class='row space-evenly parent-height center-y col-7 pr-2 stack-xs'>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+                <ul class='list-unstyled'>
+                    <li>Unstyled Item 1</li>
+                    <li>Unstyled Item 2</li>
+                    <li>Unstyled Item 3</li>
+                </ul>
+                <ul class='list-bullet'>
+                    <li>Bullet Item 1</li>
+                    <li>Bullet Item 2</li>
+                    <li>Bullet Item 3</li>
+                </ul>
+                <ol>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ol>
+            </div>
+            <div class='stack parent-height align-top center-x col-5 px-0 background-darker'>
+                <h1 class='txt-w-semibold'>Lists</h1>
+                <p>
+                    The lists have new default styling shown to the left. They are used as usual and can 
+                    be modified by any text or background modifiers. They can also be styled 
+                    with 'list-unstyled' and 'list-bullet', shown in the example.
+                </p>
+            </div>
+        </div>
+        <div class='row my-2 stack-sm stack-rv' id='images'>
+            <div class='row space-evenly parent-height center-y col-7 pr-2 stack-xs'>
+                <image src='https://via.placeholder.com/200' class='tr-sq-larger'></image>
+                <image src='https://via.placeholder.com/300x200' class='tr-rect-larger'></image>
+            </div>
+            <div class='stack parent-height align-top center-x col-5 px-0 background-darker'>
+                <h1 class='txt-w-semibold'>Images</h1>
+                <p>
+                    Images use the default tag and include a secondary colour border. There 
+                    are transition classes designed for images that cause them to expand slightly 
+                    when moused over. These can be edited in the scss and new ones with new default 
+                    sizes can be created, simply import 'transitions', create a class and include 
+                    'tr-larger(width in px, height in px)' and add it to your image. The default 
+                    transition classes are 200x200 ('tr-sq-larger'), 300x200 ('tr-rect-larger'), 
+                    and 100x100 ('tr-smsq-larger').
+                </p>
+                <div class='code-light mx-1'>
+                    <p>
+                        &lt;image src='https://via.placeholder.com/100' class='tr-smsq-larger'>&lt;/image>
+                    </p>
+                </div>
+                <image src='https://via.placeholder.com/100' class='tr-smsq-larger'></image>
+            </div>
+        </div>
+        <div class='row my-2 stack-sm stack-rv' id='borders'>
+            <div class='row space-evenly parent-height center-y col-7 pr-2 stack-xs'>
+                <div class='border-left border-right border-dashed square keep-width'>Border left and right dashed</div>
+                <div class='border-all border-round border-dark square keep-width'>Rounded border all, text colour</div>
+                <div class='border-top-thick border-bottom-thick border-left border-right square keep-width'>Thick border top and bottom, normal left and right</div>
+            </div>
+            <div class='stack parent-height align-top center-x col-5 px-0 background-darker'>
+                <h1 class='txt-w-semibold'>Borders</h1>
+                <p>
+                    Bordered objects need to have at least one of five classes that indicate
+                    the location of the borders. These are border-right, border-left, border-top,
+                    border-bottom, and border-all. Double thickness versions of these are
+                    followed by -thick in the class name.
+                </p>
+                <p>
+                    Borders can have effects such as dotted or dashed and come in the black or
+                    white colors. They can also come in the darker secondary color used for
+                    the text by default. Border classes start with 'border-'. Possible endings
+                    are dashed, dotted, round, black, white, or dark (text color).
+                </p>
+                <div class='code-light mx-1'>
+                    <p>
+                        &lt;div class='border-top border-bottom border-black'>Test border&lt;/div>
+                    </p>
+                </div>
+                <div class='border-top border-bottom border-black my-2 py-1'>Test border</div>
+            </div>
+        </div>
+        <div class='row my-2 stack-lg stack-rv' id='margins-and-padding'>
+            <div class='row parent-height center-y center-x col-3 px-1 w-100'>
+                <div class='border-all square p-2 keep-width'>2x padding</div>
+                <div class='border-all square p-0 mx-1 keep-width'>No padding, 1x x margins</div>
+                <div class='border-all square pt-1 pl-0 keep-width'>Top 1 padding, left 0 padding</div>
+                <div class='border-all square ml-2 mr-1 keep-width hide-xs'>Left margin x2, right margin x1</div>
+                <div class='border-all square ml-3 keep-width hide-xs'>Left margin x3</div>
+            </div>
+            <div class='stack parent-height align-top center-x col-9 px-0 background-darker'>
+                <h1 class='txt-w-semibold'>Spacing</h1>
+                <p>
+                    You can set the margins by using m[position]-[multiplier]. All margins
+                    start with a base of .5rem, and are multiplied by the multiplier. m-0 would
+                    mean there are no margins. The positions are left (l), right (r), top (t),
+                    bottom (b), left and right (x), and top and bottom (y). ml-3 would give a 
+                    left margin of 1.5rem. The padding system works exactly the same. 'w-' 100, 90, 
+                    and 50 exist to give more control over element width.
+                </p>
+                <h5 class='txt-w-semibold py-0'>Alignment</h5>
+                <p>
+                    Alignment is done by using align-left, align-right, align-top or align-bottom. 
+                    You can also use center-x to center horizontally and center-y to center vertically. 
+                    To make two divs the same height as a containing div for alignment and centering
+                    purposes, you can give each of the contained divs the parent-height class. The row
+                    class will make contained elements line up horizontally while the stack class will 
+                    make them line up vertically using flexbox. Rows automatically set at 100% width and 
+                    center on the y axis.
+                </p>
+                <p>
+                    Stack or row can be followed by -xs, -sm, -md, or -lg to cause them to only take 
+                    effect when the screen width is lower than the specified size preset. If an element has 
+                    the stack-sm class, it will stack only when the screen width is lower than 800px. You can 
+                    use hide-xs, -sm, -md, or -lg to hide an element when the screen is a certain size, such as 
+                    the example: There are 5 boxes until the xs limit is hit, then there are 3.
+                </p>
+                <div class='code-light mx-1'>
+                    <p>&lt;div class='border-all row pt-2 pb-1 pr-0 align-right'></p>
+                    <p>&nbsp;&nbsp;&lt;div class='border-all ml-1 mr-4 pr-1 mb-0'>Test box&lt;/div></p>
+                    <p>&nbsp;&nbsp;&lt;div class='border-all mr-0'>Test box 2&lt;/div></p>
+                    <p>&lt;/div></p>
+                </div>
+                <div class='border-all row pt-2 pb-1 pr-0 align-right keep-width w-90'>
+                    <div class='border-all ml-1 mr-5 p-3 mb-0'>Test box</div>
+                    <div class='border-all mr-0 align-bottom'>Test box 2</div>
+                </div>
+            </div>
+        </div>
+        <div class='row my-2 stack-lg stack-rv' id='tables'>
+            <div class='row stack-md parent-height center-y center-x col-5 px-1 w-100'>
+                <div class='stack row-md'>
+                    <table class='alternate-colors'>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                            <th>Column 3</th>
+                        </tr>
+                        <tr>
+                            <td>Data 1</td>
+                            <td>Data 2</td>
+                            <td>Data 3</td>
+                        </tr>
+                        <tr>
+                            <td>Data 4</td>
+                            <td>Data 5</td>
+                            <td>Data 6</td>
+                        </tr>
+                        <tr>
+                            <td>Data 7</td>
+                            <td>Data 8</td>
+                            <td>Data 9</td>
+                        </tr>
+                        <tr>
+                            <td>Data 10</td>
+                            <td>Data 11</td>
+                            <td>Data 12</td>
+                        </tr>
+                    </table>
+                    <table class='t-dark alternate-colors'>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                            <th>Column 3</th>
+                        </tr>
+                        <tr>
+                            <td>Data 1</td>
+                            <td>Data 2</td>
+                            <td>Data 3</td>
+                        </tr>
+                        <tr>
+                            <td>Data 4</td>
+                            <td>Data 5</td>
+                            <td>Data 6</td>
+                        </tr>
+                        <tr>
+                            <td>Data 7</td>
+                            <td>Data 8</td>
+                            <td>Data 9</td>
+                        </tr>
+                        <tr>
+                            <td>Data 10</td>
+                            <td>Data 11</td>
+                            <td>Data 12</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class='stack row-md'>
+                    <table class='bold-top'>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                            <th>Column 3</th>
+                        </tr>
+                        <tr>
+                            <td>Data 1</td>
+                            <td>Data 2</td>
+                            <td>Data 3</td>
+                        </tr>
+                        <tr>
+                            <td>Data 4</td>
+                            <td>Data 5</td>
+                            <td>Data 6</td>
+                        </tr>
+                        <tr>
+                            <td>Data 7</td>
+                            <td>Data 8</td>
+                            <td>Data 9</td>
+                        </tr>
+                        <tr>
+                            <td>Data 10</td>
+                            <td>Data 11</td>
+                            <td>Data 12</td>
+                        </tr>
+                    </table>
+                    <table class='t-dark bold-top'>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                            <th>Column 3</th>
+                        </tr>
+                        <tr>
+                            <td>Data 1</td>
+                            <td>Data 2</td>
+                            <td>Data 3</td>
+                        </tr>
+                        <tr>
+                            <td>Data 4</td>
+                            <td>Data 5</td>
+                            <td>Data 6</td>
+                        </tr>
+                        <tr>
+                            <td>Data 7</td>
+                            <td>Data 8</td>
+                            <td>Data 9</td>
+                        </tr>
+                        <tr>
+                            <td>Data 10</td>
+                            <td>Data 11</td>
+                            <td>Data 12</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class='stack row-md'>
+                    <table class='bold-top alternate-colors'>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                            <th>Column 3</th>
+                        </tr>
+                        <tr>
+                            <td>Data 1</td>
+                            <td>Data 2</td>
+                            <td>Data 3</td>
+                        </tr>
+                        <tr>
+                            <td>Data 4</td>
+                            <td>Data 5</td>
+                            <td>Data 6</td>
+                        </tr>
+                        <tr>
+                            <td>Data 7</td>
+                            <td>Data 8</td>
+                            <td>Data 9</td>
+                        </tr>
+                        <tr>
+                            <td>Data 10</td>
+                            <td>Data 11</td>
+                            <td>Data 12</td>
+                        </tr>
+                    </table>
+                    <table class='t-dark bold-top alternate-colors'>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                            <th>Column 3</th>
+                        </tr>
+                        <tr>
+                            <td>Data 1</td>
+                            <td>Data 2</td>
+                            <td>Data 3</td>
+                        </tr>
+                        <tr>
+                            <td>Data 4</td>
+                            <td>Data 5</td>
+                            <td>Data 6</td>
+                        </tr>
+                        <tr>
+                            <td>Data 7</td>
+                            <td>Data 8</td>
+                            <td>Data 9</td>
+                        </tr>
+                        <tr>
+                            <td>Data 10</td>
+                            <td>Data 11</td>
+                            <td>Data 12</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class='stack parent-height align-top center-x col-7 px-0 background-darker'>
+                <h1 class='txt-w-semibold'>Tables</h1>
+                <p>
+                    Tables are created using the standard table, tr, th and td classes. Each has 
+                    been customized. The padding for head elements is slightly larger than in 
+                    data elements and the text in those elements are bold. The padding on the 
+                    right is the largest. Tables have a small default margin on all sides.
+                </p>
+                <p>
+                    The examples for this section show the way tables can be altered with classes. 
+                    All classes are placed in the outer table tag. The available classes are
+                    't-dark', 'alternate-colors' and 'bold-top', all of which can be used together. 
+                    All possible combinations of these tags are shown in the examples. The regular 
+                    table colouring uses the main colour, while the dark table uses the secondary 
+                    colour. Since usage of tables is not a new concept, only the classes are shown 
+                    in the code sample. The sample would result in the bottom right table shown.
+                </p>
+                <div class='code-light mx-1'>
+                    <p>&lt;table class='t-dark bold-top alternate-colors'></p>
+                    <p>...</p>
+                    <p>&lt;table></p>
+                </div>
+            </div>
+        </div>
+        <div class='background-darker center-x stack px-5 mx-3 my-2 pb-1' id='other'>
+            <h3>Other Unique Tags</h3>
+            <p>
+                The code element is replaced by a div element with the 'code-light' or 'code-dark'
+                class. You can nest p tags inside. This usage won't be demonstrated because that 
+                would cause a dimensional break. We think you can figure it out on your own 
+                though. Here's what they both look like, for reference:
+            </p>
+            <div class='code-light'>
+                <p>print('Hello world!')</p>
+            </div>
+            <div class='code-dark mt-0'>
+                <p>print('Hello world!')</p>
+            </div>
+            <p>
+                You may use a JSON file to create a tip/quote that rotates through several 
+                randomly. You must have the quotes you wish to display in a file called data.json 
+                and use a div with the msg-holder class (nothing else inside it). It automatically 
+                formats.
+            </p>
+            <div class='msg-holder'></div>
+        </div>
+    </container>
+    <footer>
+        <p>Created by Ethan Calabrese, 2021</p>
+    </footer>
+    <script src='script/main.js'></script>
+</body>
+</html>

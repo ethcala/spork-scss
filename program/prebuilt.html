@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Framework: Prebuilt Items</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='css/style.css'/>
+</head>
+<body>
+    <container>
+
+        <header>
+            <div class='navbar nav-dark nav-fixed items-center front'>
+                <div class='item-holder'>
+                    <p class='nav-title'>CSS Framework</p>
+                    <p class='nav-item'>
+                    <a href='./index.html'>Basic Elements</a>
+                    </p>
+                    <p class='nav-item'>
+                        <a href='./interactive.html'>Interactive Elements</a>
+                    </p>
+                    <p class='nav-item active'>
+                        <a href='./prebuilt.html'>Prebuilt Items</a>
+                    </p>
+                </div>
+                
+                <a href='javascript:void(0);' class='nav-icon'>
+                    <i class='fa fa-bars'></i>
+                </a>
+            </div>
+        </header>
+
+        <div class='blank-top'></div>
+        <div class='stack' id='carousel'>
+            <div class='carousel-holder carousel-auto' data-time='5000'>
+                <div class='slides fade'>
+                    <img src='https://via.placeholder.com/600x150?text=Image+1' class='no-img-style w-100'>
+                    <div class='caption'>Caption 1</div>
+                </div>
+                <div class='slides fade'>
+                    <img src='https://via.placeholder.com/600x150?text=Image+2' class='no-img-style w-100'>
+                    <div class='caption'>Caption 2</div>
+                </div>
+                <div class='slides fade'>
+                    <img src='https://via.placeholder.com/600x150?text=Image+3' class='no-img-style w-100'>
+                    <div class='caption'>Caption 3</div>
+                </div>
+                <a class='prev' onclick='moveSlides(-1)'>&#10094;</a>
+                <a class='next' onclick='moveSlides(1)'>&#10095;</a>
+            </div>
+            <div class='txt-a-center rect-holder'>
+                <span class='rect-marker' onclick='currentSlide(1)'></span>
+                <span class='rect-marker' onclick='currentSlide(2)'></span>
+                <span class='rect-marker' onclick='currentSlide(3)'></span>
+            </div>
+
+            <div class='stack align-top center-x mt-2 px-4 background-darker'>
+                <h1 class='txt-w-semibold'>Carousel</h1>
+                <p>
+                    The carousel above uses the following code. The prev/next buttons, captions 
+                    and markers can be left out if desired. If you want the carousel to move automatically,
+                    include 'carousel-auto' along with 'carousel-holder' (if not, don't include carousel-auto). 
+                    You will also need to include a data-time=[any time] attribute. The example uses 5000. This 
+                    represents the amount of time between slide movement.
+                </p>
+                <p>
+                    This carousel uses the fade animation, which must be placed as a class in every slides div.
+                    The rect markers are used as indicators and need to have the same amount as there are slides. 
+                    Images should have the 'no-img-style' class to prevent the default image styling. All unspecified 
+                    elements, such as w-100 on images and the onclick attributes, must be included.
+                </p>
+                <div class='code-light mx-1'>
+                    <p>&lt;div class='carousel-holder carousel-auto' data-time='5000'></p>
+                    <p>&nbsp;&nbsp;&lt;div class='slides fade'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src='https://via.placeholder.com/600x150?text=Image+1' class='no-img-style w-100'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class='caption'>Caption 1&lt;/div></p>
+                    <p>&nbsp;&nbsp;&lt;/div></p>
+                    <p>&nbsp;&nbsp;&lt;div class='slides fade'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src='https://via.placeholder.com/600x150?text=Image+2' class='no-img-style w-100'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class='caption'>Caption 2&lt;/div></p>
+                    <p>&nbsp;&nbsp;&lt;/div></p>
+                    <p>&nbsp;&nbsp;&lt;div class='slides fade'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src='https://via.placeholder.com/600x150?text=Image+3' class='no-img-style w-100'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class='caption'>Caption 3&lt;/div></p>
+                    <p>&nbsp;&nbsp;&lt;/div></p>
+                    <p>&nbsp;&nbsp;&lt;a class='prev' onclick='moveSlides(-1)'>&#10094;&lt;/a></p>
+                    <p>&nbsp;&nbsp;&lt;a class='next' onclick='moveSlides(1)'>&#10095;&lt;/a></p>
+                    <p>&lt;/div></p>
+                    <p>&lt;div class='txt-a-center rect-holder'></p>
+                    <p>&nbsp;&nbsp;&lt;span class='rect-marker' onclick='currentSlide(1)'>&lt;/span></p>
+                    <p>&nbsp;&nbsp;&lt;span class='rect-marker' onclick='currentSlide(2)'>&lt;/span></p>
+                    <p>&nbsp;&nbsp;&lt;span class='rect-marker' onclick='currentSlide(3)'>&lt;/span></p>
+                    <p>&lt;/div></p>
+                </div>
+            </div>
+        </div>
+        <div class='row my-2 stack-md stack-rv' id='prebuilt-buttons'>
+            <div class='center-x center-y parent-height col-7 pr-2'>
+                <div class='x-button'>
+                    <p>X</p>
+                </div>
+                <div class='q-button'>
+                    <p>?</p>
+                </div>
+                <div class='check-button'>
+                    <p>&check;</p>
+                </div>
+            </div>
+            <div class='stack parent-height align-top center-x col-5 px-0 background-darker'>
+                <h1 class='txt-w-semibold'>Prebuilt Buttons</h1>
+                <p>
+                    These are the check, cancel and info buttons (classes called 'check-button', 'x-button' and 
+                    'q-button'). They are created with a div given the correct class and any text tag inside 
+                    with capital X, ?, or the check HTML code, although you may put in whatever you want. They 
+                    both include a transition in colour and size when moused over. They are 30x30 px by default.
+                </p>
+                <p>
+                    The transitions can be edited and applied to other elements by importing 'mixins' and using 
+                    @include 'button-change(color, width in px, height in px)' in the element. Any colour and size
+                    can be supplied.
+                </p>
+                <div class='code-light mx-1'>
+                    <p>&lt;div class='check-button'>&lt;/div></p>
+                    <p>&nbsp;&lt;p>:)&lt;/p></p>
+                    <p>&lt;/div></p>
+                </div>
+                <div class='check-button my-1'>
+                    <p>^.^</p>
+                </div>
+            </div>
+        </div>
+        <div class='row my-2 stack-md stack-rv' id='pagination'>
+            <div class='stack center-x center-y parent-height col-7 pr-2'>
+                <div class='row'>
+                    <div class='page-btn-start'>Previous</div>
+                    <div class='page-btn'>1</div>
+                    <div class='page-btn'>2</div>
+                    <div class='page-btn'>3</div>
+                    <div class='page-btn'>4</div>
+                    <div class='page-btn-end'>Next</div>
+                </div>
+                <div class='row'>
+                    <div class='page-btn-start-scnd'>1</div>
+                    <div class='page-btn-scnd'>2</div>
+                    <div class='page-btn-scnd'>3</div>
+                    <div class='page-btn-end-scnd'>4</div>
+                </div>
+            </div>
+            <div class='stack parent-height align-top center-x col-5 px-0 background-darker'>
+                <h1 class='txt-w-semibold'>Pagination</h1>
+                <p>
+                    To create pagination buttons, create a div with the row class and nest any amount of divs 
+                    inside of it. The first should be 'page-btn-start(-scnd)', the middle ones should be 
+                    'page-btn(-scnd)', and the last should be 'page-btn-end(-scnd)'. The default is a darker version 
+                    of the main colour, but the -scnd ones are a version of the secondary colour.
+                </p>
+                <div class='code-light mx-1'>
+                    <p>&lt;div class='row'></p>
+                    <p>&nbsp;&nbsp;&lt;div class='page-btn-start-scnd'>1&lt;/div></p>
+                    <p>&nbsp;&nbsp;&lt;div class='page-btn-scnd'>2&lt;/div></p>
+                    <p>&nbsp;&nbsp;&lt;div class='page-btn-end-scnd'>3&lt;/div></p>
+                    <p>&lt;/div></p>
+                </div>
+                <div class='row'>
+                    <div class='page-btn-start-scnd'>1</div>
+                    <div class='page-btn-scnd'>2</div>
+                    <div class='page-btn-end-scnd'>3</div>
+                </div>
+            </div>
+        </div>
+        <div class='row my-2 stack-md stack-rv' id='badges'>
+            <div class='stack center-x center-y parent-height col-7 pr-2'>
+                <div class='row'>
+                    <h4>Badge Regular</h4>
+                    <div class='badge'>New</div>
+                </div>
+                <div class='row'>
+                    <h4>Badge Dark</h4>
+                    <div class='badge-dark'>New</div>
+                </div>
+                <div class='row'>
+                    <h4>Badge Light</h4>
+                    <div class='badge-light'>New</div>
+                </div>
+                <div class='row'>
+                    <h4>Badge Main Circle</h4>
+                    <div class='badge-main badge-circle'></div>
+                </div>
+                <div class='row'>
+                    <h4>Badge Second Pill</h4>
+                    <div class='badge-second badge-pill'>New</div>
+                </div>
+                <div class='row'>
+                    <h4>Badge Red</h4>
+                    <div class='badge-red'>New</div>
+                </div>
+                <div class='row'>
+                    <h4>Badge Green</h4>
+                    <div class='badge-green'>New</div>
+                </div>
+            </div>
+            <div class='stack parent-height align-top center-x col-5 px-0 background-darker'>
+                <h1 class='txt-w-semibold'>Badges</h1>
+                <p>
+                    Badges are added to text by putting both in a row div and adding text and then a div with the 
+                    correct badge class. All are named 'badge-[color in example]', except the regular one which is 
+                    just 'badge'. To create the pill or circle shape (circle doesn't support text), add the class 
+                    'badge-pill' or 'badge-circle' in addition to the colour.
+                </p>
+                <div class='code-light mx-1'>
+                    <p>&lt;div class='row'></p>
+                    <p>&nbsp;&nbsp;&lt;h5>Informative Example&lt;/h5></p>
+                    <p>&nbsp;&nbsp;&lt;div class='badge-main badge-pill'>New&lt;/div></p>
+                    <p>&lt;/div></p>
+                </div>
+                <div class='row'>
+                    <h5>Informative Example</h5>
+                    <div class='badge-main badge-pill'>New</div>
+                </div>
+            </div>
+        </div>
+        <div class='row my-2 stack-lg stack-rv' id='modals'>
+            <div class='center-x center-y parent-height col-7 pr-2'>
+                <div class='button-main px-2' onclick="openModal('modalID')">Modal Example</div>
+            </div>
+            <div class='stack parent-height align-top center-x col-5 px-0 background-darker'>
+                <h1 class='txt-w-semibold'>Modals</h1>
+                <p>
+                    The modal to the left can be created with the code below. Modals should be top-level but buttons can 
+                    be anywhere. The button should have a property called onclick="openmodal('yourModalID)". Your modal 
+                    should have that ID so it can be correctly called. Inside a div has the modal-content class. 
+                    A span inside should have the close class and optionally our x-button class. It should also say 
+                    onclick="closemodal('yourModalID')".
+                </p>
+                <p>
+                    The modal opens by default near the top of the screen, which can be changed by using the 'm-middle' 
+                    class on the outermost modal div.
+                </p>
+                <div class='code-light mx-1'>
+                    <p>&lt;div class='button-main px-2' onclick="openModal('basicModal')">Another Button&lt;/div></p>
+                </div>
+                <div class='code-light mx-1'>
+                    <p>&lt;div id='basicModal' class='modal m-middle'></p>
+                    <p>&nbsp;&nbsp;&lt;div class='modal-content'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class='x-button close' onclick="closeModal('basicModal')">X&lt;/span></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3 class='border-bottom'>Basic Modal&lt;/h3></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p>This modal is an example.&lt;/p></p>
+                    <p>&nbsp;&nbsp;&lt;/div></p>
+                    <p>&lt;/div></p>
+                </div>
+                <div class='button-main px-2' onclick="openModal('basicModal')">Another Button</div>
+            </div>
+        </div>
+        <div class='row my-2 stack-md stack-rv' id='accordions'>
+            <div class='stack center-x center-y parent-height col-7 pr-2'>
+                <div class='accordion-holder'>
+                    <button class='accordion acc-only-one'>First</button>
+                    <div class='panel'>
+                        <p>Text...</p>
+                    </div>
+                    <button class='accordion acc-only-one'>Second</button>
+                    <div class='panel'>
+                        <p>Text...</p>
+                    </div>
+                    <button class='accordion acc-only-one'>Third</button>
+                    <div class='panel'>
+                        <p>Text...</p>
+                    </div>
+                </div>
+            </div>
+            <div class='stack parent-height align-top center-x col-5 px-0 background-darker'>
+                <h1 class='txt-w-semibold'>Accordion</h1>
+                <p>
+                    Accordions can either allow only one item open at once or allow any in any 
+                    combination. If you include 'acc-only-one' as a class on the buttons, that
+                    accordion will only allow one to be open at once, which will not affect any 
+                    accordions lacking these classes. The button contains the text as 
+                    the header and the panel contains anything you want inside.
+                </p>
+                <p>
+                    The code example is a part of the shown example.
+                </p>
+                <div class='code-light mx-1'>
+                    <p>&lt;div class='accordion-holder'></p>
+                    <p>&nbsp;&nbsp;&lt;button class='accordion'>First&lt;/button></p>
+                    <p>&nbsp;&nbsp;&lt;div class='panel'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p>Text...&lt;/p></p>
+                    <p>&nbsp;&nbsp;&lt;/div></p>
+                    <p>&nbsp;&nbsp;&lt;button class='accordion'>Second&lt;/button></p>
+                    <p>&nbsp;&nbsp;&lt;div class='panel'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p>Text...&lt;/p></p>
+                    <p>&nbsp;&nbsp;&lt;/div></p>
+                    <p>&lt;/div></p>
+                </div>
+                <div class='accordion-holder'>
+                    <button class='accordion'>First</button>
+                    <div class='panel'>
+                        <p>Text...</p>
+                    </div>
+                    <button class='accordion'>Second</button>
+                    <div class='panel'>
+                        <p>Text...</p>
+                    </div>
+                    <button class='accordion'>Third</button>
+                    <div class='panel'>
+                        <p>Text...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row my-2 stack-sm stack-rv' id='show-hide'>
+            <div class='stack center-x center-y parent-height col-7 pr-2'>
+                <button onclick="toggleHidden('hiddenDivID')">Toggle Show/Hide</button>
+                <div id='hiddenDivID' class='hidden-div'>There's content here!</div>
+            </div>
+            <div class='stack parent-height align-top center-x col-5 px-0 background-darker'>
+                <h1 class='txt-w-semibold'>Toggle Show/Hide Button</h1>
+                <p>
+                    This is a button or div given the attribute onclick="toggleHidden('divID')". 
+                    The div should have the hidden-div class and the correct ID.
+                </p>
+                <div class='code-light mx-1'>
+                    <p>&lt;button onclick="toggleHidden('hiddenDiv2')">Another Example&lt;/button></p>
+                    <p>&lt;div id='hiddenDiv2' class='hidden-div'>More content!&lt;/div></p>
+                </div>
+                <button onclick="toggleHidden('hiddenDiv2')">Another Example</button>
+                <div id='hiddenDiv2' class='hidden-div'>More content!</div>
+            </div>
+        </div>
+    </container>
+    <footer>
+        <p>Created by Ethan Calabrese, 2021</p>
+    </footer>
+
+    <div id='modalID' class='modal m-middle'>
+        <div class='modal-content'>
+            <span class='x-button close' onclick="closeModal('modalID')">&times;</span>
+            <h3 class='border-bottom'>This is a centered modal.</h3>
+            <p>It's centered using the m-middle class. Modifiers can be used here, 
+                like the border-bottom class the header uses. If you leave out the 
+                m-middle class, the modal will appear near the top of the screen.
+            </p>
+        </div>
+    </div>
+
+    <div id='basicModal' class='modal'>
+        <div class='modal-content'>
+            <span class='x-button close' onclick="closeModal('basicModal')">&times;</span>
+            <h3 class='border-bottom'>Basic Modal</h3>
+            <p>This modal is an example.</p>
+        </div>
+    </div>
+    
+    <script src='script/main.js'></script>
+</body>
+</html>

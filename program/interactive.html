@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Framework: Interactive Elements</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='css/style.css'/>
+</head>
+<body>
+    <container>
+        <header>
+            <div class='navbar nav-dark nav-fixed items-center front'>
+                <div class='item-holder'>
+                    <p class='nav-title'>CSS Framework</p>
+                    <p class='nav-item'>
+                    <a href='./index.html'>Basic Elements</a>
+                    </p>
+                    <p class='nav-item active'>
+                        <a href='./interactive.html'>Interactive Elements</a>
+                    </p>
+                    <p class='nav-item'>
+                        <a href='./prebuilt.html'>Prebuilt Items</a>
+                    </p>
+                </div>
+                
+                <a href='javascript:void(0);' class='nav-icon'>
+                    <i class='fa fa-bars'></i>
+                </a>
+            </div>
+        </header>
+
+        <div class='blank-top'></div>
+        <div class='row my-2 stack-md stack-rv' id='headers-and-footers'>
+            <div class='stack center-x parent-height col-7 pr-2'>
+                <div class='nav-light'>
+                    <div class='item-holder'>
+                        <p class='nav-title'>Nav Light</p>
+                        <p class='nav-item active'>Active</p>
+                        <p class='nav-item'>Inactive</p>
+                        <p class='nav-item disabled'>Disabled</p>
+                    </div>
+                </div>
+                <div class='navbar nav-dark mt-6 items-right'>
+                    <div class='item-holder'>
+                        <p class='nav-title'>Nav Dark</p>
+                        <div class='right-holder'>
+                            <p class='nav-item active'>Active</p>
+                            <p class='nav-item'>Inactive</p>
+                            <p class='nav-item disabled'>Disabled</p>
+                        </div>
+                    </div>
+                    <a href='javascript:void(0);' class='nav-icon'>
+                        <i class='fa fa-bars'></i>
+                    </a>
+                </div>
+                <header class='mt-6'>
+                    <h1>Header Dark</h1>
+                    <p>Paragraph tags</p>
+                </header>
+                <header class='header-light mt-6'>
+                    <h1>Header Light</h1>
+                    <p>Paragraph tags</p>
+                </header>
+                <footer class='mt-6'>
+                    <h1>Footer Dark</h1>
+                    <p>Paragraph tags</p>
+                </footer>
+                <footer class='footer-light mt-6'>
+                    <h1>Footer Light</h1>
+                    <p>Paragraph tags</p>
+                </footer>
+            </div>
+            <div class='stack parent-height align-top center-x col-5 px-0 background-darker'>
+                <h1 class='txt-w-semibold'>Headers & Footers</h1>
+                <p>
+                    Navbars have the class options of 'nav-light' and 'nav-dark', shown 
+                    in the example. A nested div should be tagged 'item-holder' and contain all p 
+                    tags. Nested items must use 'nav-title' for the first one, the others should have
+                    'nav-item' with the active one tagged 'active'. Disabled items should be tagged 
+                    'disabled'. Items by default are pushed to the left, but you may tag the top 
+                    element with 'items-right' to push them right. You will also need to contain all 
+                    items to be pushed to the right with a div with a 'right-holder' class. 
+                    Adding the 'center-x' class will center all text.
+                </p>
+                <p>
+                    Navbars can have the 'nav-fixed' class to fix to the top. There is a 
+                    'blank-top' div class to place above content to fit the fixed navbar. 
+                    You may need the 'front' class on the fixed navbar to keep it in 
+                    front of everything else.
+                </p>
+                <p>
+                    To create responsive navbars, you will need an a tag under the item-holder div. 
+                    This should have the properties href='javascript:void(0);' and class='nav-icon', 
+                    and contain a nested icon with the class 'fa fa-bars'.
+                </p>
+                <p>
+                    Headers and footers are used as normal with new default styling. Add a 
+                    'header-light' or 'footer-light' class for a light version. Headings 
+                    are the same size as paragraphs by default and both are centered. Please
+                    don't put a footer in any divs or containers because it will cry. Headers 
+                    are fine though.
+                </p>
+                <div class='code-light mx-1'>
+                    <p>&lt;div class='navbar nav-dark mt-6 items-right'></p>
+                    <p>&nbsp;&nbsp;&lt;div class='item-holder'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class='nav-title'>Nav Dark&lt;/p></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class='right-holder'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class='nav-item active'>Active&lt;/p></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class='nav-item'>Inactive&lt;/p></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class='nav-item disabled'>Disabled&lt;/p></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div></p>
+                    <p>&nbsp;&nbsp;&lt;/div></p>
+                    <p>&nbsp;&nbsp;&lt;a href='javascript:void(0);' class='nav-icon'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class='fa fa-bars'>&lt;/i></p>
+                    <p>&nbsp;&nbsp;&lt;/a></p>
+                    <p>&lt;/div></p>
+                </div>
+                <p>This code shows the dark navbar in the example.</p>
+            </div>
+        </div>
+        <div class='row my-2 stack-md stack-rv' id='buttons'>
+            <div class='row center-x center-y parent-height col-7 pr-2'>
+                <div class='stack-xs mx-1'>
+                    <div class='button-dark my-3'>
+                        <p>Dark Button</p>
+                    </div>
+                    <div class='button-light my-3'>
+                        <p>Light Button</p>
+                    </div>
+                    <div class='button-main my-3'>
+                        <p>Main Button</p>
+                    </div>
+                </div>
+                <div class='stack-xs mx-1'>
+                    <div class='button-red my-3'>
+                        <p>Red Button</p>
+                    </div>
+                    <div class='button-green my-3'>
+                        <p>Green Button</p>
+                    </div>
+                    <div class='button-yellow my-3'>
+                        <p>Yellow Button</p>
+                    </div>
+                </div>
+            </div>
+            <div class='stack parent-height align-top center-x col-5 px-0 background-darker'>
+                <h1 class='txt-w-semibold'>Buttons</h1>
+                <p>
+                    Buttons are called with a div with the class 'button-' followed by dark, light, 
+                    main, red, green or yellow. Text properties can also be altered in the div, such 
+                    as in the example code.
+                </p>
+                <p>
+                    Buttons start at 120px wide and 35px tall. The paragraph font and size are used.
+                    Links will not be styled by default. Buttons built with this class can use p tags,
+                    but will work without them.
+                </p>
+                <div class='code-light mx-1'>
+                    <p>
+                        &lt;div class='button-main txt-white fw-semibold'>Test button&lt;/div>
+                    </p>
+                </div>
+                <div class='button-main txt-white fw-semibold'>Test button</div>
+            </div>
+        </div>
+        <div class='row my-2 stack-lg stack-rv' id='forms'>
+            <div class='row center-x center-y parent-height col-7 pr-2'>
+                <form>
+                    <div class='row stack-sm'>
+                        <label class='txt-w-semibold'>Text:</label>
+                        <input type='text'>
+                    </div>
+                    <div class='stack'>
+                        <label class='txt-w-semibold'>Radio:</label>
+                        <div class='row'>
+                            <input type='radio' name='ex' id='opt-1'>
+                            <label for='opt-1'>Option 1</label>
+                        </div>
+                        <div class='row'>
+                            <input type='radio' name='ex' id='opt-2'>
+                            <label for='opt-2'>Option 2</label>
+                        </div>
+                        <div class='row'>
+                            <input type='radio' name='ex' id='opt-3'>
+                            <label for='opt-3'>Option 3</label>
+                        </div>
+                    </div>
+                    <div class='stack'>
+                        <label class='txt-w-semibold'>Checkbox:</label>
+                        <div class='row'>
+                            <input type='checkbox' name='ex2' id='opt-1b'>
+                            <label for='opt-1b'>Option 1</label>
+                        </div>
+                        <div class='row'>
+                            <input type='checkbox' name='ex2' id='opt-2b'>
+                            <label for='opt-2b'>Option 2</label>
+                        </div>
+                        <div class='row'>
+                            <input type='checkbox' name='ex2' id='opt-3b'>
+                            <label for='opt-3b'>Option 3</label>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <input type='submit'>
+                    </div>
+                    <div class='row stack-xs'>
+                        <button>Button Example 1</button>
+                        <button>Button Example 2</button>
+                    </div>
+                </form>
+            </div>
+            <div class='stack parent-height align-top center-x col-5 px-0 background-darker'>
+                <h1 class='txt-w-semibold'>Forms</h1>
+                <p>
+                    All form elements are remade. Labels can have text property classes added 
+                    to them. Forms can contain divs with the row or stack classes as needed. 
+                    The default button tag is styled in the same way as the submit button.
+                </p>
+                <p>
+                    Forms will by default take up 50% of their containing element. The basic 
+                    font is used by default for all elements in a form.
+                </p>
+                <div class='code-light mx-1'>
+                    <p>&lt;form></p>
+                    <p>&nbsp;&nbsp;&lt;div class='row stack-sm'></p>    
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class='txt-w-semibold'>Text:&lt;/label></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='text'></p>
+                    <p>&nbsp;&nbsp;&lt;/div></p>
+                    <p>&nbsp;&nbsp;&lt;div class='stack'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class='txt-w-semibold'>Radio:&lt;/label></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class='row'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='radio' name='ex' id='opt-1a'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for='opt-1a'>Option 1&lt;/label></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class='row'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='radio' name='ex' id='opt-2a'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for='opt-2a'>Option 2&lt;/label></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class='row'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='radio' name='ex' id='opt-3a'></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for='opt-3a'>Option 3&lt;/label></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div></p>
+                    <p>&lt;/form></p>
+                </div>
+                <form>
+                    <div class='row stack-sm'>
+                        <label class='txt-w-semibold'>Text:</label>
+                        <input type='text'>
+                    </div>
+                    <div class='stack'>
+                        <label class='txt-w-semibold'>Radio:</label>
+                        <div class='row'>
+                            <input type='radio' name='ex' id='opt-1a'>
+                            <label for='opt-1a'>Option 1</label>
+                        </div>
+                        <div class='row'>
+                            <input type='radio' name='ex' id='opt-2a'>
+                            <label for='opt-2a'>Option 2</label>
+                        </div>
+                        <div class='row'>
+                            <input type='radio' name='ex' id='opt-3a'>
+                            <label for='opt-3a'>Option 3</label>
+                        </div>
+                    </div>
+                </form>
+                <p>
+                    The background of this form looks different because the background of this section
+                    matches it.
+                </p>
+            </div>
+        </div>
+
+    </container>
+    <footer>
+        <p>Created by Ethan Calabrese, 2021</p>
+    </footer>
+
+    <script src='script/main.js'></script>
+</body>
+</html>
